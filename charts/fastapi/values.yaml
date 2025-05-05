@@ -1,0 +1,18 @@
+replicaCount: 3
+image:
+  repository: yourdockerhub/fastapi-app
+  tag: latest
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  host: app1.mydomain.com
+tls:
+  enabled: true
+  secretName: fastapi-cert
+hpa:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  cpuUtilization: 80

@@ -1,0 +1,6 @@
+postgres:
+  user: fastuser
+  password: supersecurepassword
+  db: appdb
+volume:
+  size: 10Gi
